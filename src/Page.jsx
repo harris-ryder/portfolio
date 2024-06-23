@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience.jsx";
 import info from "./info.json";
-import gameImage from "../public/game.png";
 import pdf from "../public/harrisrydercv.pdf";
 
 function Page() {

@@ -13,6 +13,13 @@
             "href": "https://mosaic.harris-ryder.com/"
         },
         {
+            "name": "Cathode Ray Tube Shader",
+            "info": "A CRT shader to be used for web applications. All the logic written in the fragment shader, options to change pixel size, aspect ration adn intensity.",
+            "tags": ["Threejs","webGL"],
+            "img": "shader.png",
+            "href": "https://shader-crt.harris-ryder.com/"
+        },
+        {
             "name": "Newspaper - Blog API",
             "info": "A web appplication to write and read articles, users can sign up and use the markdown editor to freely post their content. Articles are saved in a MongoDB database.",
             "tags": ["React","Node.js","MongoDB", "Passportjs"],
@@ -34,11 +41,11 @@
             "href": "https://cv-maker-harris-ryders-projects.vercel.app/"
         },
         {
-            "name": "Execute - Minimalist ToDo List",
-            "info": "A simple todo list application written in vanilla Javascript, HTML and CSS",
-            "tags": ["Javascript","HTML","CSS"],
-            "img": "execute.png",
-            "href": "https://h5ryder.github.io/Execute/"
+            "name": "Doge Rocket - iPhone Game",
+            "info": "A flappy bird like game, steer a rocket with tricky mechanics through clouds.",
+            "tags": ["Swift","SpriteKit"],
+            "img": "dogeRocket.png",
+            "href": "https://appadvice.com/app/doge2moon/1566547854"
         }
     ],
 

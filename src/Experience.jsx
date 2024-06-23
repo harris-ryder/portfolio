@@ -87,7 +87,7 @@ export default function Experience({ imageLocation }) {
 
       <OrbitControls makeDefault />
 
-      <Environment preset="city" intensity={0.5} />
+      <Environment preset="city" environmentIntensity={1.5} />
 
       <group position={[0, -0.5, 0.5]}>
         <Float rotationIntensity={1.8}>

@@ -11,11 +11,9 @@
   --color-project: #172446;
 
   /** Transparent **/
-  --background-project: rgba(0.2,0.2,0.2,0.1);
+  --background-project: rgba(0.2, 0.2, 0.2, 0.2);
   --font-color-faded-transparent: rgba(141, 159, 186, 0.3); /* add opacity */
   --font-color-link-transparent: rgba(89, 220, 213, 0.3); /* convert to rgba */
-
-
 
   --font-size-l: 48px;
   --font-size-m: 20px;
@@ -27,7 +25,8 @@
   --font-weight-m: 400;
   --font-weight-s: 200;
 
-  --background-color: #0f172b;
+  --background-color: #1c1c1c;
+  --background-highlight-color: #18223c;
 }
 
 /*DEFAULTS*/
@@ -99,28 +98,27 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: all;
-
 }
 
 #glow {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:var(--x);
-    background: radial-gradient(#1f2d51,transparent,transparent);
-    z-index: -1;
-    pointer-events: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: var(--x);
+  background: radial-gradient(
+    var(--background-highlight-color),
+    transparent,
+    transparent
+  );
+  z-index: -2;
+  pointer-events: auto;
 }
 
-
 @media screen and (max-width: 1000px) {
-    #glow {
-      background: var(--background-color);
-    }
+  #glow {
+    background: var(--background-color);
   }
-
-
-
+}
 
 /*Set position & properties of html content*/
 #html-content {
@@ -159,7 +157,6 @@ body {
   justify-content: flex-start;
   gap: 12px;
   margin-top: 16px;
-  
 }
 
 .nav > p {
@@ -171,11 +168,11 @@ body {
 }
 
 .nav > p.active {
-    color: var(--font-color-default);
+  color: var(--font-color-default);
 }
 
 .nav > p:hover {
-    transform: translateY(-20%);
+  transform: translateY(-20%);
 }
 
 .icons {
@@ -187,12 +184,11 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
-    .icons {
-      position: static;
-      margin-top: 16px;
-    }
+  .icons {
+    position: static;
+    margin-top: 16px;
   }
-  
+}
 
 .icons > img,
 .icons > svg {
@@ -244,11 +240,13 @@ a:hover > .link-icon {
   background-color: var(--color-button);
 }
 
-.projects, .experience {
-    margin-top: 76px;
+.projects,
+.experience {
+  margin-top: 76px;
 }
 
-.project, .job {
+.project,
+.job {
   display: flex;
   gap: 20px;
   padding: 20px;
@@ -256,7 +254,8 @@ a:hover > .link-icon {
   margin-top: 12px;
 }
 
-.project:hover, .job:hover {
+.project:hover,
+.job:hover {
   border-top: 1px solid var(--color-button);
   background-color: var(--background-project);
   border-radius: 8px;
@@ -281,13 +280,13 @@ a:hover > .link-icon {
   border-radius: 4px;
 }
 
-.project:hover > .project-image{
-    border: 2px solid var(--font-color-link-transparent);
+.project:hover > .project-image {
+  border: 2px solid var(--font-color-link-transparent);
 }
 
 .job-date {
-    flex: 2 0 120px;
-    font-size: var(--font-size-xs);
+  flex: 2 0 120px;
+  font-size: var(--font-size-xs);
 }
 
 .about {
@@ -295,45 +294,47 @@ a:hover > .link-icon {
   margin-right: 20px;
 }
 
-.projects-more, .experience-more {
-    padding: 20px;
-    border-top: 1px solid transparent;
-    margin-top: 12px;
-    pointer-events: true;
-  }
-  
-  .projects-more:hover, .experience-more:hover {
-    border-top: 1px solid var(--color-button);
-    background-color: var(--background-project);
-    border-radius: 8px;
-  }
+.projects-more,
+.experience-more {
+  padding: 20px;
+  border-top: 1px solid transparent;
+  margin-top: 12px;
+  pointer-events: true;
+}
 
-  .projects-more > a, .experience-more > a {
-    font-size: var(--font-size-ms);
-    font-weight: var(--font-weight-m);
-  }
+.projects-more:hover,
+.experience-more:hover {
+  border-top: 1px solid var(--color-button);
+  background-color: var(--background-project);
+  border-radius: 8px;
+}
+
+.projects-more > a,
+.experience-more > a {
+  font-size: var(--font-size-ms);
+  font-weight: var(--font-weight-m);
+}
 
 .experience-more {
-    margin-bottom: 300px;
+  margin-bottom: 300px;
 }
 
 .about > p {
-    margin-top: 12px;
+  margin-top: 12px;
 }
-  
+
 /* MOBILE */
 
 .mobile-header {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 74px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 74px;
 }
 
 .sticky-section {
-    position: sticky;
-    color:white;
-    top: 0; /* You can use top, right, bottom, or left depending on your needs */
-    padding: 20px;
-    background-color: var(--background-color);
-
+  position: sticky;
+  color: white;
+  top: 0; /* You can use top, right, bottom, or left depending on your needs */
+  padding: 20px;
+  background-color: var(--background-color);
 }
