@@ -1,0 +1,65 @@
+{
+    "about":  {
+        "para1": "My passions lie in tinkering and playing with new tools, which led me to study Engineering at the University of Cambridge back in 2015. Since then, I've worked in various engineering roles but have naturally gravitated towards software and automation. My journey began with writing scripts to automate 3D design tasks and publishing iPhone applications in my free time.",
+        "para2": "A year ago, I made the leap into web development. Since then, I've completed several courses, including The Odin Project and ThreeJSJourney, and have pursued my own projects. This experience has solidified my love for creating and optimizing web applications, and I'm excited to continue exploring the vast world of full stack development."
+    },
+
+    "projects": [
+        {
+            "name": "Mosaic - Combine Albums With Stable Diffusion",
+            "info": "A web app that combines albums found using Spotify API to generate a unique album cover through Stable Diffusion. Up to four albums can be selected along how much influence they have as well as prompt.",
+            "tags": ["React", "Sass", "JWT", "Node.js"],
+            "img": "mosaic.png",
+            "href": "https://mosaic.harris-ryder.com/"
+        },
+        {
+            "name": "Newspaper - Blog API",
+            "info": "A web appplication to write and read articles, users can sign up and use the markdown editor to freely post their content. Articles are saved in a MongoDB database.",
+            "tags": ["React","Node.js","MongoDB", "Passportjs"],
+            "img": "newspaper.png",
+            "href": "https://github.com/H5Ryder/blog-frontend"
+        },
+        {
+            "name": "Secret Club - Simple CRUD Application",
+            "info": "A simple messaging application, that allows users to sign up and send messages in a global chat. Users given the password, can access member and admin priviladges, that allow the author of the message to be seen and to delete messages respectively.",
+            "tags": ["Javascript","Node.js","Passportjs","MongoDB"],
+            "img": "secretClub.png",
+            "href": "https://members-only.harris-ryder.com/"
+        },
+        {
+            "name": "VisualCV - Create a CV with proffesional Formatting",
+            "info": "A CV formatter inspired by LaTex, left form receives users personal information and right side renders formatted pdf live.",
+            "tags": ["React", "Tailwind CSS"],
+            "img": "visualCV.png",
+            "href": "https://cv-maker-harris-ryders-projects.vercel.app/"
+        },
+        {
+            "name": "Execute - Minimalist ToDo List",
+            "info": "A simple todo list application written in vanilla Javascript, HTML and CSS",
+            "tags": ["Javascript","HTML","CSS"],
+            "img": "execute.png",
+            "href": "https://h5ryder.github.io/Execute/"
+        }
+    ],
+
+    "experience": [
+        {
+            "name": "Apiject",
+            "info": "Apiject helps pharmaceutical companies deliver injectable medicines to more patients through the combination of fill, finish technologies and innovative design. Working in a division focused on future products run by the founder. Generating new concepts, with a focus on CAD design and prototyping.",
+            "date": "July - Aug 2018"
+        },
+        {
+            "name": "Product Manager - Hawksley Medical Equipment",
+            "info": "Began as a final year Master’s placement and was offered a permanent role. Took on the design of the company's new medical centrifuge, corresponding with manufacturers based in Korea & Germany.",
+            "date": "2015 - 2019"
+        },
+        {
+            "name": "Univeristy of Cambridge - Master's Engineering",
+            "info": "BA (Hons), MEng: Manufacturing Engineering Tripos (2.1, Merit)",
+            "date": "2015 - 2019"
+        }
+
+    ]
+}
+
+
