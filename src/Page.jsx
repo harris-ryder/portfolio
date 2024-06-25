@@ -19,11 +19,11 @@ function Page() {
   };
 
   const [scrolling, setScrolling] = useState(false);
-  const [imageLocation, setImageLocation] = useState("medium/mosaic.png");
+  const [shader, setShader] = useState("default");
   const [mobileMode, setMobileMode] = useState(window.innerWidth < 1000);
 
-  function updateGameBoyDisplay(imageLocation) {
-    setImageLocation(imageLocation);
+  function updateGameBoyDisplay(shader) {
+    setShader(shader);
   }
 
   const handleSectionClick = (sectionId) => {
@@ -51,7 +51,6 @@ function Page() {
     const rightContainer = document.querySelector(".right-content");
 
     const handleScroll = (e) => {
-
       const projectsDelta =
         sections["projects"].current.offsetTop - rightContainer.scrollTop;
       const experienceDelta =
@@ -85,7 +84,9 @@ function Page() {
       }
     };
 
-    if (!mobileMode) {rightContainer.addEventListener("scroll", handleScroll);}
+    if (!mobileMode) {
+      rightContainer.addEventListener("scroll", handleScroll);
+    }
 
     window.addEventListener("resize", handleWindowSizeChange);
 
@@ -93,10 +94,10 @@ function Page() {
       rightContainer.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleWindowSizeChange);
     };
-  }, [scrolling,mobileMode]);
+  }, [scrolling, mobileMode]);
 
   useEffect(() => {
-    handleWindowSizeChange()
+    handleWindowSizeChange();
 
     let glow = document.querySelector("#glow");
 
@@ -116,7 +117,8 @@ function Page() {
       glow.style.top = `${posY}%`;
     };
 
-   if (!mobileMode) window.addEventListener("mousemove", handleMouseMove, { passive: true });
+    if (!mobileMode)
+      window.addEventListener("mousemove", handleMouseMove, { passive: true });
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
@@ -246,7 +248,7 @@ function Page() {
                 position: [5, 2, 20],
               }}
             >
-              <Experience imageLocation={imageLocation} />
+              <Experience setShader={shader} />
             </Canvas>
           </div>
         )}
@@ -337,8 +339,7 @@ function Page() {
             </div>
           )}
 
-        
-        {mobileMode && (<h3 className="sticky-section">About</h3>)}
+          {mobileMode && <h3 className="sticky-section">About</h3>}
 
           <div className="about" ref={sections.about}>
             {Object.values(info.about).map((paragraph, index) => (
@@ -346,16 +347,14 @@ function Page() {
             ))}
           </div>
 
-          {mobileMode && (<h3 className="sticky-section">Projects</h3>)}
+          {mobileMode && <h3 className="sticky-section">Projects</h3>}
 
           <div className="projects" ref={sections.projects}>
             {info.projects.map((project, index) => (
               <div
                 key={index}
                 className="project"
-                onMouseEnter={() =>
-                  updateGameBoyDisplay(`medium/${project.img}`)
-                }
+                onMouseEnter={() => updateGameBoyDisplay(project.shader)}
               >
                 <img
                   className="project-image"
@@ -399,7 +398,7 @@ function Page() {
             </div>
           </div>
 
-          {mobileMode && (<h3 className="sticky-section">Experience</h3>)}
+          {mobileMode && <h3 className="sticky-section">Experience</h3>}
 
           <div className="experience" ref={sections.experience}>
             {info.experience.map((job, index) => (

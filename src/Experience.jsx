@@ -28,58 +28,13 @@ import * as THREE from "three";
 
 import Gameboy from "./components/Gameboy";
 
-export default function Experience({ imageLocation }) {
-  const {
-    posX,
-    posY,
-    posZ,
-    main,
-    buttons_ab,
-    dPad,
-    buttons_selStart,
-    luminanceThreshold,
-  } = useControls("General", {
-    posX: {
-      value: -1.97,
-      min: -4,
-      max: 4,
-      step: 0.01,
-    },
-    posY: {
-      value: -2.05,
-      min: -4,
-      max: 4,
-      step: 0.01,
-    },
-    posZ: {
-      value: 0.67,
-      min: -4,
-      max: 4,
-      step: 0.01,
-    },
-    luminanceThreshold: {
-      value: 8.0,
-      min: -4,
-      max: 10,
-      step: 0.01,
-    },
-    main: "#f5f5f5",
-    buttons_ab: "#e85497",
-    dPad: "#5f5f5f",
-    buttons_selStart: "#aaaaaa",
-  });
-
-  let colors = { main, buttons_ab, dPad, buttons_selStart };
+export default function Experience({ setShader }) {
   const { width, height } = useThree((state) => state.viewport);
 
   return (
     <>
       <EffectComposer>
-        <Bloom
-          mipmapBlur
-          intensity={10.0}
-          luminanceThreshold={luminanceThreshold}
-        />
+        <Bloom mipmapBlur intensity={10.0} luminanceThreshold={8.0} />
         <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
       </EffectComposer>
 
@@ -91,7 +46,7 @@ export default function Experience({ imageLocation }) {
 
       <group position={[0, -0.5, 0.5]}>
         <Float rotationIntensity={1.8}>
-          <Gameboy {...{ imageLocation, colors, posX, posY, posZ }} />
+          <Gameboy {...{ setShader }} />
         </Float>
       </group>
     </>
