@@ -394,7 +394,7 @@ function Page() {
             ))}
 
             <div className="projects-more">
-              <a>View all projects</a>
+              <a href="https://h5ryder.github.io/old-portfolio/" target="_blank">View all projects</a>
             </div>
           </div>
 
