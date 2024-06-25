@@ -34,13 +34,13 @@ export default function Experience({ setShader }) {
   return (
     <>
       <EffectComposer>
-        <Bloom mipmapBlur intensity={10.0} luminanceThreshold={8.0} />
+        <Bloom mipmapBlur intensity={1.0} luminanceThreshold={8.0} />
         <ToneMapping mode={ToneMappingMode.ACES_FILMIC} />
       </EffectComposer>
 
       <color args={["#0F172B"]} />
 
-      <OrbitControls makeDefault enableZoom={false}/>
+      <OrbitControls makeDefault enableZoom={false} enablePan={false}/>
 
       <Environment preset="city" environmentIntensity={1.5} />
 
