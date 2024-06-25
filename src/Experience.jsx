@@ -40,7 +40,7 @@ export default function Experience({ setShader }) {
 
       <color args={["#0F172B"]} />
 
-      <OrbitControls makeDefault />
+      <OrbitControls makeDefault enableZoom={false}/>
 
       <Environment preset="city" environmentIntensity={1.5} />
 
