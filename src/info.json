@@ -28,7 +28,7 @@
       "tags": ["React", "Node.js", "MongoDB", "Passportjs"],
       "img": "newspaper.png",
       "shader": "newspaper",
-      "href": "https://github.com/H5Ryder/blog-frontend"
+      "href": "https://newspaper.harris-ryder.com/"
     },
     {
       "name": "Secret Club - Simple CRUD Application",
@@ -44,7 +44,7 @@
       "tags": ["React", "Tailwind CSS"],
       "img": "visualCV.png",
       "shader": "visualCV",
-      "href": "https://cv-maker-harris-ryders-projects.vercel.app/"
+      "href": "https://cvmaker.harris-ryder.com/"
     },
     {
       "name": "Doge Rocket - iPhone Game",
