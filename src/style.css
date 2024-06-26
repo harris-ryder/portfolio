@@ -9,6 +9,8 @@
   --font-color-link: #59dcd5;
   --color-button: #1b3450;
   --color-project: #172446;
+  --color-linktag:  #dd41e06c;
+  --color-linkTagHover: #f907fd84;
 
   /** Transparent **/
   --background-project: rgba(0.2, 0.2, 0.2, 0.2);
@@ -240,6 +242,28 @@ a:hover > .link-icon {
   background-color: var(--color-button);
 }
 
+.tags > .link-tag {
+  position: relative;
+  color: var(--font-color-link);
+  background-color: var(--color-linktag);
+  transition: transform 0.2s linear, background-color 0.2s linear; /* Added background-color transition */
+
+}
+
+.tags > .link-tag:hover {
+  transform: scale(1.08);
+  background-color: var(--color-linkTagHover);
+
+}
+
+.clipboard {
+  margin-left: 4px;
+  width: 15px;
+  height: 15px;
+  vertical-align: middle; /* Adjusts the alignment to be centered with the text */
+
+}
+
 .projects,
 .experience {
   margin-top: 76px;
@@ -322,6 +346,24 @@ a:hover > .link-icon {
 .about > p {
   margin-top: 12px;
 }
+
+
+.clipboard-notification {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 12px;
+  color: var(--font-color-link);
+  background-color: var(--color-button);
+  border-radius: 8px;
+  transition: opacity 0.8s ease; /* Add transition for opacity */
+}
+
+.clipboard-notification.hide {
+  opacity: 0; /* Set opacity to 0 to fade out */
+}
+
+
 
 /* MOBILE */
 
