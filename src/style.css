@@ -146,9 +146,13 @@ body {
 .right-content {
   flex: 1 1 0;
   overflow: auto;
-  overflow-y: hidden;
   pointer-events: auto;
 
+}
+
+.right-content::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
 }
 
 .left-content .html {
