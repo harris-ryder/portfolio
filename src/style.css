@@ -9,13 +9,15 @@
   --font-color-link: #59dcd5;
   --color-button: #1b3450;
   --color-project: #172446;
-  --color-linktag:  #dd41e06c;
+  --color-linktag: #dd41e06c;
   --color-linkTagHover: #f907fd84;
 
   /** Transparent **/
   --background-project: rgba(0.2, 0.2, 0.2, 0.2);
-  --font-color-faded-transparent: rgba(141, 159, 186, 0.3); /* add opacity */
-  --font-color-link-transparent: rgba(89, 220, 213, 0.3); /* convert to rgba */
+  --font-color-faded-transparent: rgba(141, 159, 186, 0.3);
+  /* add opacity */
+  --font-color-link-transparent: rgba(89, 220, 213, 0.3);
+  /* convert to rgba */
 
   --font-size-l: 48px;
   --font-size-m: 20px;
@@ -83,7 +85,8 @@ body {
 
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: "liga" 1, "calt" 1, "cv11" 1; /* fix for Chrome */
+  font-feature-settings: "liga" 1, "calt" 1, "cv11" 1;
+  /* fix for Chrome */
 }
 
 @supports (font-variation-settings: normal) {
@@ -107,11 +110,9 @@ body {
   width: 100%;
   height: 100%;
   top: var(--x);
-  background: radial-gradient(
-    var(--background-highlight-color),
-    transparent,
-    transparent
-  );
+  background: radial-gradient(var(--background-highlight-color),
+      transparent,
+      transparent);
   z-index: -2;
   pointer-events: auto;
 }
@@ -144,8 +145,10 @@ body {
 
 .right-content {
   flex: 1 1 0;
-  overflow: auto; /* Add this line to enable scrolling */
+  overflow: auto;
+  overflow-y: hidden;
   pointer-events: auto;
+
 }
 
 .left-content .html {
@@ -161,7 +164,7 @@ body {
   margin-top: 16px;
 }
 
-.nav > p {
+.nav>p {
   color: var(--font-color-faded);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-m);
@@ -169,11 +172,11 @@ body {
   transition: transform 0.3s ease;
 }
 
-.nav > p.active {
+.nav>p.active {
   color: var(--font-color-default);
 }
 
-.nav > p:hover {
+.nav>p:hover {
   transform: translateY(-20%);
 }
 
@@ -192,24 +195,25 @@ body {
   }
 }
 
-.icons > img,
-.icons > svg {
+.icons>img,
+.icons>svg {
   width: 25px;
   height: 25px;
-  pointer-events: auto; /* Enable pointer events on hover */
+  pointer-events: auto;
+  /* Enable pointer events on hover */
   fill: var(--font-color-faded);
 }
 
-.icons > svg:hover {
+.icons>svg:hover {
   fill: var(--font-color-default);
 }
 
-.icons > .stroke {
+.icons>.stroke {
   fill: #121212;
   stroke: var(--font-color-faded);
 }
 
-.icons > .stroke:hover {
+.icons>.stroke:hover {
   fill: #121212;
   stroke: var(--font-color-default);
 }
@@ -222,7 +226,7 @@ body {
   transition: transform 0.2s;
 }
 
-a:hover > .link-icon {
+a:hover>.link-icon {
   transform: translateX(0.2em) translateY(-0.2em);
 }
 
@@ -233,7 +237,7 @@ a:hover > .link-icon {
   margin-top: 12px;
 }
 
-.tags > li {
+.tags>li {
   font-size: var(--font-size-s);
 
   padding: 0.4em 0.8em;
@@ -242,15 +246,16 @@ a:hover > .link-icon {
   background-color: var(--color-button);
 }
 
-.tags > .link-tag {
+.tags>.link-tag {
   position: relative;
   color: var(--font-color-link);
   background-color: var(--color-linktag);
-  transition: transform 0.2s linear, background-color 0.2s linear; /* Added background-color transition */
+  transition: transform 0.2s linear, background-color 0.2s linear;
+  /* Added background-color transition */
 
 }
 
-.tags > .link-tag:hover {
+.tags>.link-tag:hover {
   transform: scale(1.08);
   background-color: var(--color-linkTagHover);
 
@@ -260,7 +265,8 @@ a:hover > .link-icon {
   margin-left: 4px;
   width: 15px;
   height: 15px;
-  vertical-align: middle; /* Adjusts the alignment to be centered with the text */
+  vertical-align: middle;
+  /* Adjusts the alignment to be centered with the text */
 
 }
 
@@ -304,7 +310,7 @@ a:hover > .link-icon {
   border-radius: 4px;
 }
 
-.project:hover > .project-image {
+.project:hover>.project-image {
   border: 2px solid var(--font-color-link-transparent);
 }
 
@@ -333,8 +339,8 @@ a:hover > .link-icon {
   border-radius: 8px;
 }
 
-.projects-more > a,
-.experience-more > a {
+.projects-more>a,
+.experience-more>a {
   font-size: var(--font-size-ms);
   font-weight: var(--font-weight-m);
 }
@@ -343,7 +349,7 @@ a:hover > .link-icon {
   margin-bottom: 300px;
 }
 
-.about > p {
+.about>p {
   margin-top: 12px;
 }
 
@@ -356,11 +362,13 @@ a:hover > .link-icon {
   color: var(--font-color-link);
   background-color: var(--color-button);
   border-radius: 8px;
-  transition: opacity 0.8s ease; /* Add transition for opacity */
+  transition: opacity 0.8s ease;
+  /* Add transition for opacity */
 }
 
 .clipboard-notification.hide {
-  opacity: 0; /* Set opacity to 0 to fade out */
+  opacity: 0;
+  /* Set opacity to 0 to fade out */
 }
 
 
@@ -376,7 +384,8 @@ a:hover > .link-icon {
 .sticky-section {
   position: sticky;
   color: white;
-  top: 0; /* You can use top, right, bottom, or left depending on your needs */
+  top: 0;
+  /* You can use top, right, bottom, or left depending on your needs */
   padding: 20px;
   background-color: var(--background-color);
 }
