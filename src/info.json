@@ -6,9 +6,9 @@
 
   "projects": [
     {
-      "name": "ModelNote- Share 3D Models and annotate them",
-      "info": "NOT FINISHED! Users can upload their 3D models to ModelNote and share them via links. No more screen shots and communication issues, teams can collaborate and annotate their models.",
-      "tags": ["React", "Typescript", "JWT", "Node.js", "Websockets"],
+      "name": "ModelNote - 3D Collaboration",
+      "info": "Under development - Users can upload their 3D models and share them. No more screen shots and communication issues, teams can collaborate real time on the browser.",
+      "tags": ["React", "Typescript", "Node.js", "Websockets"],
       "img": "modelnote.png",
       "shader": "visualCV",
       "href": "https://modelnote.vercel.app/"
