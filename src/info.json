@@ -11,7 +11,7 @@
       "tags": ["React", "Typescript", "JWT", "Node.js", "Websockets"],
       "img": "modelnote.png",
       "shader": "visualCV",
-      "href": "https://modelnote.vercel.app/",
+      "href": "https://modelnote.vercel.app/"
     },
     {
       "name": "Mosaic - Combine Albums With Stable Diffusion",
