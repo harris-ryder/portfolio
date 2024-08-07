@@ -6,6 +6,14 @@
 
   "projects": [
     {
+      "name": "ModelNote- Share 3D Models and annotate them",
+      "info": "NOT FINISHED! Users can upload their 3D models to ModelNote and share them via links. No more screen shots and communication issues, teams can collaborate and annotate their models.",
+      "tags": ["React", "Typescript", "JWT", "Node.js", "Websockets"],
+      "img": "modelnote.png",
+      "shader": "visualCV",
+      "href": "https://modelnote.vercel.app/",
+    },
+    {
       "name": "Mosaic - Combine Albums With Stable Diffusion",
       "info": "A web app that combines albums found using Spotify API to generate a unique album cover through Stable Diffusion. Up to four albums can be selected along with how much influence they have as well as prompt. Token required to use app, click on the tag below.",
       "tags": ["React", "Sass", "JWT", "Node.js"],
