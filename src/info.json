@@ -7,7 +7,7 @@
     {
       "name": "ModelNote - 3D Collaboration",
       "info": "Under development - Users can upload their 3D models and share them. No more screenshots and communication issues; teams can collaborate in real time on the browser.",
-      "tags": ["React", "Typescript", "PostgreSQL", "Websockets"],
+      "tags": ["React", "Typescript", "PostgreSQL"],
       "img": "modelnote.png",
       "shader": "visualCV",
       "href": "https://modelnote.io/"
@@ -15,7 +15,7 @@
     {
       "name": "Mosaic - Combine Albums With Stable Diffusion",
       "info": "A web app that combines albums found using the Spotify API to generate a unique album cover through Stable Diffusion. Up to four albums can be selected along with how much influence they have as well as the prompt. A token is required to use the app; click on the tag below.",
-      "tags": ["React", "Sass", "JWT", "Node.js"],
+      "tags": ["React", "Sass", "Node.js"],
       "img": "mosaic.png",
       "shader": "mosaic",
       "href": "https://mosaic.harris-ryder.com/",
